@@ -1,0 +1,92 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+		<h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
+	</header>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<th colspan="9" nowrap align="center"><span align="center" style="text-align: center;">Skillinformationen:</span></th>
+			</tr>
+			<tr>
+				<td nowrap align="center">Typus: </td>
+				<td nowrap align="center">Diff: </td>
+				<td nowrap align="center">Wert: </td>
+				<td nowrap align="center">Stufe: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><input type="text" name="data.SkillTypus.value" value="{{data.SkillTypus.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input type="number" name="data.SkillDifficult.value" value="{{data.SkillDifficult.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center">&nbsp;
+					<select
+						name="data.SkillValue.value"
+						id="data.SkillValue.value"
+						style="height: 24px; width: 50px; font-size: 0.75em"
+						title="Ability used for feet"
+						placeholder="{{ localize 'Name' }}"
+					>
+						<option name="data.SkillValue.value" value="{{data.SkillValue.value}}" hidden="hidden" selected="selected">{{data.SkillValue.value}}</option>
+						<option type="number" style="width: 45px" value="0">0</option>
+						<option type="number" style="width: 45px" value="1">1</option>
+						<option type="number" style="width: 45px" value="2">2</option>
+						<option type="number" style="width: 45px" value="3">3</option>
+						<option type="number" style="width: 45px" value="4">4</option>
+						<option type="number" style="width: 45px" value="5">5</option>
+						<option type="number" style="width: 45px" value="6">6</option>
+					</select>&nbsp;
+				</td>
+				<td nowrap align="center" class="">
+					&nbsp;
+					<select
+						name="data.SkillUsage.value"
+						id="data.SkillUsage.value"
+						style="height: 24px; width: 50px; font-size: 0.75em"
+						title="Ability used for feet"
+						placeholder="{{ localize 'Name' }}"
+					>
+						<option name="data.SkillUsage.value" value="{{data.SkillUsage.value}}" hidden="hidden" selected="selected">{{data.SkillUsage.value}}</option>
+						<option type="number" style="width: 45px" value="1">1</option>
+						<option type="number" style="width: 45px" value="2">2</option>
+						<option type="number" style="width: 45px" value="3">3</option>
+						<option type="number" style="width: 45px" value="4">4</option>
+						<option type="number" style="width: 45px" value="5">5</option>
+						<option type="number" style="width: 45px" value="6">6</option>
+					</select>&nbsp;
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<th colspan="9" nowrap align="center"><span align="center" style="text-align: center;">Gegenmaßnahmen:</span></th>
+			</tr>
+			<tr>
+				<td nowrap align="center">Ausweichbar: </td>
+				<td nowrap align="center">Widerstehbar: </td>
+				<td nowrap align="center">Parierbar: </td>
+				<td nowrap align="center">Konterbar: </td>
+				<td nowrap align="center">Unaufhaltbar: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><input type="checkbox" name="data.Countermeasures.evade_value" {{checked data.Countermeasures.evade_value}} /></td>
+				<td nowrap align="center"><input type="checkbox" name="data.Countermeasures.resist_value" {{checked data.Countermeasures.resist_value}} /></td>
+				<td nowrap align="center"><input type="checkbox" name="data.Countermeasures.parry_value" {{checked data.Countermeasures.parry_value}} /></td>
+				<td nowrap align="center"><input type="checkbox" name="data.Countermeasures.counter_value" {{checked data.Countermeasures.counter_value}} /></td>
+				<td nowrap align="center"><input type="checkbox" name="data.Countermeasures.ultima_value" {{checked data.Countermeasures.ultima_value}} /></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<td nowrap align="center">Beschreibung: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><textarea style="width: 450px; height: 100px;" name="data.ItemDiscription.value" title="ItemDiscription" placeholder="{{ localize 'Name' }}">{{data.ItemDiscription.value}}</textarea></td>				
+			</tr>
+		</tbody>
+	</table>
+</form>

@@ -1,0 +1,27 @@
+<label style="width: 150px; color: rgb(0, 0, 0); text-align: center;">Inventar</label>
+<div class="section-body">
+	<ol class="stacks-list item-list">
+		{{#each stacks as |stack stacksId|}}
+			<div class="item stack flexrow" data-item-id="{{stack._id}}">
+				<table class="attribute_center" border="2">
+					<tbody>
+						<tr>
+							<th nowrap align="center" class="sheet-table-header-left" style="width: 150px;">&nbsp;Gegenstand&nbsp;</th>
+							<th nowrap align="center" class="sheet-table-header-left" style="width: 115px;">&nbsp;Type&nbsp;</th>
+							<th nowrap align="center" class="sheet-table-header-left" style="width: 70px;">&nbsp;Menge&nbsp;</th>
+							<th nowrap align="center" class="sheet-table-header-left" style="width: 340px;">&nbsp;Beschreibung&nbsp;</th>
+							<th nowrap align="center" class="sheet-table-header-left" style="width: 82px;">Entfernen:</th>
+						</tr>
+						<tr>
+							<td nowrap align="center" class="sheet-table-header-left" style="width: 131px;"><span style="width: 50px;" title="{{data.ItemDiscription.value}}">&nbsp;<a class="item-edit">{{stack.name}}</a>&nbsp;&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img>&nbsp;</span></td>
+							<td nowrap align="center">&nbsp;<input type="text" class="" style="width: 110px" value="{{stack.data.ItemType.value}}" disabled="true" />&nbsp;</td>
+							<td nowrap align="center">&nbsp;<input type="number" class="stack-value inline-edit" name="data.ItemCount.value" id="data.ItemCount.value" data-property="data.ItemCount.value" data-field="data.ItemCount.value" style="width: 55px" value="{{stack.data.ItemCount.value}}" min="0" max="10"/>&nbsp;</td>
+							<td nowrap align="center">&nbsp;<input type="text" class="" style="width: 330px" value="{{stack.data.ItemDiscription.value}}" disabled="true" />&nbsp;</td>
+							<td nowrap align="center"><span class="item-delete delete">&nbsp;<i class="fas fa-trash"></i>&nbsp;</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		{{/each}}
+	</ol>
+</div>

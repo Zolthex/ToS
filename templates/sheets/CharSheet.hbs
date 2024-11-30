@@ -1,0 +1,143 @@
+<form class="Character-Sheet {{cssClass}}" autocomplete="off">
+
+    {{!-- Character Header Stats - Start --}}
+    <!--
+    <div class="header personal flexrow">
+        <h1>
+            <span class="label h1Left" align="left" style="text-align: left;">Charakterdaten</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="label h1-right" align="right" style="text-align: right;">Stufe {{actor.data.CharLevel.value}}</span>
+        </h1>
+    </div>
+    -->    
+    <div class="header personal flexrow row">
+        <h1>
+            <div class="column" style="float:left; width: 50%; text-align: left;">Charakter</div>
+            <div class="column" style="float:left; width: 50%; text-align: right;">Stufe {{actor.data.CharLevel.value}}</div>
+        </h1>
+    </div>
+
+    {{!-- Character Header Stats - End --}}
+
+    <br/>
+    
+    {{!-- Character Basic Stats - Start --}}
+    
+    <section class="general" ondragstart="return false;" ondrop="return false;">
+
+        <table>
+            <tr>
+                <td>
+                    <img class="charimg profile" src="{{actor.img}}" title="{{actor.name}}" height="110" width="110" data-edit="img">
+                </td>
+                <td>
+                    <div class="charname item" align="center"><br>
+                        <input class="input name" style="box-shadow: none !important;" name="name" type="text" value="{{actor.name}}" />
+                        <span class="label">&nbsp;Charaktername</span><br><br>
+                        <input class="input" style="box-shadow: none !important;" name="data.PlayerName.name" type="text" value="{{actor.data.PlayerName.name}}" /><br>
+                        <span class="label">&nbsp;Spielername</span><br>&nbsp;
+                    </div>
+                </td>
+                <td>
+                    <div class="item" align="center"><br>
+                        <input class="input species" style="box-shadow: none !important;" type="text" name="data.Species.value" value="{{actor.data.Species.value}}" /><br>
+                        <span class="label species">&nbsp;Spezies</span><br><br>
+                        <input class="input species" style="box-shadow: none !important;" type="text" name="data.PathConcept.value" value="{{actor.data.PathConcept.value}}" placeholder="z.B. Jägern"/><br>
+                        <span class="label species">&nbsp;Pfad/Konzept</span><br>&nbsp;
+                    </div>
+                </td>
+                <td>
+                    <div id="field-class" class="item" align="center"><br>
+                        <input class="input class" style="box-shadow: none !important;" name="data.Class.value" type="text" value="{{actor.data.Class.value}}" /><br>
+                        <span class="label class">&nbsp;Klasse</span><br><br>
+                        <input class="input class" style="box-shadow: none !important;" name="data.PathPoints.value" type="text" value="{{actor.data.PathPoints.value}}" /><br>
+                        <span class="label class">&nbsp;Pfadpunkte</span><br>&nbsp;
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+    {{!-- Character Basic Stats - End --}}
+
+    <p/><br/>
+
+    {{!-- Character Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+		<a class="item" data-tab="stats">Charakter</a>
+        <a class="item" data-tab="attributes">Hauptwerte</a>
+        <a class="item" data-tab="features">Fertigkeiten</a>
+        <a class="item" data-tab="spellbook">Buch der Gaben</a>
+        <a class="item" data-tab="companions">Vertraute</a>
+        <a class="item" data-tab="weapon">Kampf</a>
+        <a class="item" data-tab="inventory">Inventar</a>
+        <a class="item" data-tab="notes">Notizen</a>
+        <a class="item active" data-tab="biography">Geschichte</a>
+    </nav>
+    
+    <hr>
+
+    {{!-- Character Sheet Body - Start --}}
+    <section class="sheet-body">
+
+        <div class="tab stats flexrow" data-group="primary" data-tab="stats">
+            <p/><br/>
+             {{> "systems/toeloria/templates/sheets/character/actor-stats.html" sections=stats}}
+        </div>
+
+        <div class="tab attributes flexrow" data-group="primary" data-tab="attributes">
+            <p/><br/>
+             {{> "systems/toeloria/templates/sheets/character/actor-attributes.html" sections=attributes}}
+        </div>
+
+        {{!-- Features Tab --}}
+        <div class="tab features flexcol" data-group="primary" data-tab="features">
+            <p/><br/>
+            {{> "systems/toeloria/templates/sheets/character/actor-features.html" sections=features}}
+        </div>
+
+        {{!-- Spellbook Tab --}}
+        <div class="tab spellbook flexcol" data-group="primary" data-tab="spellbook">
+            <p/><br/>
+            {{> "systems/toeloria/templates/sheets/character/actor-spellbook.html" sections=spellbook}}
+        </div>
+
+            {{!-- Companions Tab --}}
+        <div class="tab companions flexcol" data-group="primary" data-tab="companions">
+            <p/><br/>
+            {{> "systems/toeloria/templates/sheets/character/actor-companions.html" sections=companions}}
+        </div>
+
+        {{!-- Weapon Tab --}}
+        <div class="tab weapon flexcol" data-group="primary" data-tab="weapon">
+            <p/><br/>
+            {{> "systems/toeloria/templates/sheets/character/actor-weapon.html" sections=weapon}}
+        </div>
+
+        {{!-- Inventory Tab --}}
+        <div class="tab inventory flexcol" data-group="primary" data-tab="inventory">
+            <p/><br/>
+            {{> "systems/toeloria/templates/sheets/character/actor-inventory.html" sections=inventory}}
+        </div>
+
+        {{!-- Notes Tab --}}
+        <div class="tab notes flexcol" data-group="primary" data-tab="notes">
+            <p/><br/>
+            {{> "systems/toeloria/templates/sheets/character/actor-notes.html" sections=notes}}
+        </div>
+
+        {{!-- Biography Tab --}}
+        <div class="tab biography flexrow" data-group="primary" data-tab="biography">
+            <div class="biography textcolor">
+                {{editor content=data.biography.value target="data.biography.value" button=true owner=owner editable=editable}}
+            </div>
+        </div>
+        {{!-- Character Sheet Body - End --}}
+
+    </section>
+    <hr>
+</form>

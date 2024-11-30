@@ -1,0 +1,73 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+		<h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
+	</header>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<th colspan="9" nowrap align="center"><span align="center" style="text-align: center;">Waffeninformationen:</span></th>
+			</tr>
+			<tr>
+				<td nowrap align="center">Typus: </td>
+				<td nowrap align="center">Verzauberung: </td>
+				<td nowrap align="center">Bezeichnung: </td>
+			</tr>
+			<tr>
+
+			<!--<td nowrap align="center"><input name="data.Type.value" type="text" value="{{data.Type.value}}" placeholder="{{ localize 'Name' }}" /></td>-->
+
+				<td nowrap align="center">
+					<select name="data.Typus.value" id="data.Type.value" style="width: 200px" placeholder="{{data.Typus.value}}">
+						{{#select data.Typus.value}}
+							<option id="data.Typus.value" value="{{data.Typus.value}}" hidden="hidden" selected="selected">{{data.Typus.value}}</option>
+							<option type="text" style="width: 45px" value="Blasrohr">Blasrohr</option>
+							<option type="text" style="width: 45px" value="Wurfwaffen">Wurfwaffen</option>
+							<option type="text" style="width: 45px" value="Bogen & Armbrust">Bogen & Armbrust</option>
+							<option type="text" style="width: 45px" value="Pistolen & Revolver">Pistolen & Revolver</option>
+							<option type="text" style="width: 45px" value="Gewehre & Flinten">Gewehre & Flinten</option>
+							<option type="text" style="width: 45px" value="Dampfdruckwaffen">Dampfdruckwaffen</option>
+						{{/select}}
+					</select>
+				</td>
+
+				<td nowrap align="center"><input name="data.EnchantValue.value" type="number" value="{{data.EnchantValue.value}}" placeholder="{{ localize 'Name' }}" /></td>
+
+				<td nowrap align="center">
+					<select name="data.TypeName.value" id="data.Type.value" style="width: 200px" placeholder="{{data.TypeName.value}}">
+						{{#select data.TypeName.value}}
+							<option id="data.TypeName.value" value="{{data.TypeName.value}}" hidden="hidden" selected="selected">{{data.TypeName.value}}</option>
+							<option type="text" style="width: 45px" value="Blowpipes">Blasrohr</option>
+							<option type="text" style="width: 45px" value="ThrowingWeapons">Wurfwaffen</option>
+							<option type="text" style="width: 45px" value="BowNCrossbow">Bogen & Armbrust</option>
+							<option type="text" style="width: 45px" value="PistolsNRevolvers">Pistolen & Revolver</option>
+							<option type="text" style="width: 45px" value="RiflesNShotguns">Gewehre & Flinten</option>
+							<option type="text" style="width: 45px" value="PressureGuns">Dampfdruckwaffen</option>
+						{{/select}}
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td nowrap align="center">Schaden: </td>
+				<td nowrap align="center">Bonus: </td>
+				<td nowrap align="center">Kategorie: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><input name="data.WeaponDamage.value" type="number" value="{{data.WeaponDamage.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.CategoryValue.value" type="number" value="{{data.CategoryValue.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.Category.value" type="text" value="{{data.Category.value}}" placeholder="{{ localize 'Name' }}" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<td nowrap align="center">Beschreibung: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><textarea style="width: 450px; height: 100px;" name="data.ItemDiscription.value" title="FeatDiscription" placeholder="{{ localize 'Name' }}">{{data.ItemDiscription.value}}</textarea></td>				
+			</tr>
+		</tbody>
+	</table>
+</form>

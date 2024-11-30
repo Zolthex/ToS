@@ -1,0 +1,46 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+		<h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
+	</header>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<th colspan="9" nowrap align="center"><span align="center" style="text-align: center;">Vertrauteninformationen:</span></th>
+			</tr>
+			<tr>
+				<td nowrap align="center">Typus: </td>
+				<td nowrap align="center">Siegel-Grad: </td>
+				<td nowrap align="center">Schaden/Schutz: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><input name="data.Typus.value" type="text" value="{{data.Typus.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.Sealgrade.value" type="number" value="{{data.Sealgrade.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.DmgProt.value" type="number" value="{{data.DmgProt.value}}" placeholder="{{ localize 'Name' }}" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<td nowrap align="center">Fähigkeit: </td>
+				<td nowrap align="center">Wirkung: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><input name="data.Skill.value" type="text" value="{{data.Skill.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.Discription.value" type="text" value="{{data.Discription.value}}" placeholder="{{ localize 'Name' }}" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<td nowrap align="center">Beschreibung: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><textarea style="width: 450px; height: 100px;" name="data.ItemDiscription.value" title="FeatDiscription" placeholder="{{ localize 'Name' }}">{{data.ItemDiscription.value}}</textarea></td>				
+			</tr>
+		</tbody>
+	</table>
+</form>

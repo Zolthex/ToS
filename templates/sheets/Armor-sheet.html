@@ -1,0 +1,42 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+		<h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
+	</header>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<th colspan="9" nowrap align="center"><span align="center" style="text-align: center;">Rüstungsinformationen:</span></th>
+			</tr>
+			<tr>
+				<td nowrap align="center">Typus: </td>
+				<td nowrap align="center">Verzauberung: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><input name="data.Type.value" type="text" value="{{data.Type.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.EnchantValue.value" type="number" value="{{data.EnchantValue.value}}" placeholder="{{ localize 'Name' }}" /></td>
+			</tr>
+			<tr>
+				<td nowrap align="center">Schutz: </td>
+				<td nowrap align="center">Bonus: </td>
+				<td nowrap align="center">Kategorie: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><input name="data.ArmorProtection.value" type="number" value="{{data.ArmorProtection.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.CategoryValue.value" type="number" value="{{data.CategoryValue.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.Category.value" type="text" value="{{data.Category.value}}" placeholder="{{ localize 'Name' }}" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<td nowrap align="center">Beschreibung: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><textarea style="width: 450px; height: 100px;" name="data.ItemDiscription.value" title="FeatDiscription" placeholder="{{ localize 'Name' }}">{{data.ItemDiscription.value}}</textarea></td>				
+			</tr>
+		</tbody>
+	</table>
+</form>

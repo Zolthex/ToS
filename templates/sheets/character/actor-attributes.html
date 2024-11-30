@@ -1,0 +1,222 @@
+<!-- <label style="width: 150px; color: rgb(0, 0, 0); text-align: left;"  align="left">Attribut Bereich</label> -->
+<!-- <label style="width: 150px; color: rgb(0, 0, 0); text-align: right;" align="right">Charakter erschaffen:</label> -->
+<span class="label h1Left" align="left" style="text-align: left;">Attribut Bereich</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;
+<span class="label h1-right" align="right" style="text-align: right;">Charakter fertig:</span>
+<input type="checkbox" class="value inline-edit" id="create_chkbox" data-field="Created" name="data.Created.value" {{checked data.Created.value}} {{#if data.Created.value}}disabled{{/if}} title="Erschaffung fertig?" />
+<!-- readonly disabled -->
+
+<div class="section-body">
+	<ol class="features-list item-list">
+      <div class="item attribute flexrow">
+         <table class="attribute_center" border="2">
+            <tbody>  
+               <tr>
+                  <th nowrap colspan="2" style="width: 150px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Attribut</label></th>
+                  <th nowrap style="width: 60px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Wert</label></th>
+                  <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Makro</label></th>
+                  <th nowrap colspan="2" style="width: 150px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Attribut</label></th>
+                  <th nowrap style="width: 60px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Wert</label></th>
+                  <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Makro</label></th>
+                  <th nowrap colspan="2" style="width: 150px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Attribut</label></th>
+                  <th nowrap style="width: 60px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Wert</label></th>
+                  <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Makro</label></th>
+               </tr>
+               <tr style="width: 120px;">
+                  <td colspan="12" style="height: 15px; font-size: 13px; text-align:center; color: rgb(255, 50, 0);" border="1">Körperliche Attribute</td>
+               </tr> 
+               <tr style="width: 150px;">
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Körperkraft</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Belastsamkeit des Körpers">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Strength.value" data-att="Strength" name="data.Strength.value" style="width:35px; text-align:center;" title="Körperkraft-Wert" value="{{actor.data.Strength.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Strength" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Geschicklichkeit</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die köperliche Gewandtheit">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Dexterity.value" data-att="Dexterity" name="data.Dexterity.value" style="width:35px; text-align:center;" title="Geschicklichkeit-Wert" value="{{actor.data.Dexterity.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Dexterity" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Reflexe & Sinne</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Auffassungsgabe und schnelle Reaktion auf unerwartetes">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Perception.value" data-att="Perception" name="data.Perception.value" style="width:35px; text-align:center;" title="Reflexe & Sinne-Wert" value="{{actor.data.Perception.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Perception" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>      </tr>
+               <tr style="width: 120px;">
+                  <td colspan="12" style="height: 15px; font-size: 13px; text-align:center; color: rgb(255, 50, 0);" border="1">Geistige Attribute</td>
+               </tr>
+               <tr style="width: 120px;">
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Verstand</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Kunst Zusammenhänge zu begreifen">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Mind.value" data-att="Mind" name="data.Mind.value" style="width:35px; text-align:center;" title="Verstand-Wert" value="{{actor.data.Mind.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Mind" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Seelenkraft</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Stärke der göttlichen Zuwendung">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Soul.value" data-att="Soul" name="data.Soul.value" style="width:35px; text-align:center;" title="Seelenkraft-Wert" value="{{actor.data.Soul.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Soul" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Askese</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die spirituelle Kraft">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Spirit.value" data-att="Spirit" name="data.Spirit.value" style="width:35px; text-align:center;" title="Askese-Wert" value="{{actor.data.Spirit.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Spirit" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+               </tr>
+               <tr style="width: 120px;">
+                  <td colspan="12" style="height: 15px; font-size: 13px; text-align:center; color: rgb(255, 50, 0);" border="1">Soziale Attribute</td>
+               </tr>
+               <tr style="width: 120px;">
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Charisma</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Anziehung und Austrahlung">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Charisma.value" data-att="Charisma" name="data.Charisma.value" style="width:35px; text-align:center;" title="Charisma-Wert" value="{{actor.data.Charisma.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Charisma" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Manipulation</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Kunst andere zu kontrollieren">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Manipulation.value" data-att="Manipulation" name="data.Manipulation.value" style="width:35px; text-align:center;" title="Manipulation-Wert" value="{{actor.data.Manipulation.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Manipulation" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Diplomatie</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Das Geschick etwas mit Worten zu bewegen">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Diplomacy.value" data-att="Diplomacy" name="data.Diplomacy.value" style="width:35px; text-align:center;" title="Diplomatie-Wert" value="{{actor.data.Diplomacy.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Interaction" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+               </tr>
+               <tr style="width: 120px;">
+                  <td colspan="12" style="height: 15px; font-size: 13px; text-align:center; color: rgb(255, 50, 0);" border="1">Metaphysische Attribute</td>
+               </tr>
+               <tr style="width: 120px;">
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Intuition</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Gabe nicht greifbares zu erahnen">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.Intuition.value" data-att="Intuition" name="data.Intuition.value" style="width:35px; text-align:center;" title="Intuition-Wert" value="{{actor.data.Intuition.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="Intuition" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Gefahrensinn</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Gabe Gefahren zu erkennen">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.SenseOfDanger.value" data-att="SenseOfDanger" name="data.SenseOfDanger.value" style="width:35px; text-align:center;" title="Gefahrensinn-Wert" value="{{actor.data.SenseOfDanger.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="SenseOfDanger" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Kosmos-Einklang</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Gabe Übersinnliches zu verstehen und zu lenken">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.CosmosConsistent.value" data-att="CosmosConsistent" name="data.CosmosConsistent.value" style="width:35px; text-align:center;" title="Kosmoseinklang-Wert" value="{{actor.data.CosmosConsistent.value}}"></td>
+                  <td nowrap align="center" class="rollable" data-roll-type="attribute"><button type="button" data-toe-roll="1d12" data-toe-attribute="CosmosConsistent" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td>
+               </tr>
+               <tr style="width: 120px;">
+                  <td colspan="12" style="height: 15px; font-size: 13px; text-align:center; color: rgb(255, 50, 0);" border="1">Schutzspezische Attribute</td>
+               </tr>
+               <tr style="width: 120px;">
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Entrinnen</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Gabe Angriffen auszuweichen">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap colspan="2" align="center"><input type="number" class="value attr-edit" data-field="data.Evade.value" data-att="Evade" name="data.Evade.value" style="width:35px; text-align:center;" title="Entrinnen-Wert" value="{{actor.data.Evade.value}}"></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Abwehren</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Gabe Angriffe ins Leere laufen zu lassen">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap colspan="2" align="center"><input type="number" class="value attr-edit" data-field="data.Thwart.value" data-att="Thwart" name="data.Thwart.value" style="width:35px; text-align:center;" title="Abwehr-Wert" value="{{actor.data.Thwart.value}}"></td>
+                  <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Aushalten</label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="Die Gabe Schaden wegzustecken">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+                  <td nowrap colspan="2" align="center"><input type="number" class="value attr-edit" data-field="data.Sustain.value" data-att="Sustain" name="data.Sustain.value" style="width:35px; text-align:center;" title="Aushalt-Wert" value="{{actor.data.Sustain.value}}"></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </ol>
+</div>
+
+<p><br><label style="width: 150px; color: rgb(0, 0, 0); text-align:left;">Berechnende Werte</label></p>
+<div class="section-body">
+	<ol class="features-list item-list">
+      <div class="item attribute flexrow">
+         <table class="attribute_center" border="2">
+            <tbody>
+               <tr>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Magie-Runden</label>
+                     <span style="width: 50px;" title="Die Anzahl an 'Aktions-Runden', welche man für Magie-Gaben benutzen kann">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Segens-Runden</label>
+                     <span style="width: 50px;" title="Die Anzahl an 'Aktions-Runden', welche man für Segens-Gaben benutzen kann">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Askese-Runden</label>
+                     <span style="width: 50px;" title="Die Anzahl an 'Aktions-Runden', welche man für Akese-Gaben benutzen kann">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Aktions-Runden</label>
+                     <span style="width: 50px;" title="Die generelle Anzahl an 'Aktions-Runden', welche man pro Initiavive-Runde benutzen kann">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Initiavive-Bonus</label>
+                     <span style="width: 50px;" title="Der Bonus den man bei einem Initiavive-Wurf hinzubekommt">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Ausdauer</label>
+                     <span style="width: 50px;" title="Die Anzahl an Metern/Feldern, die ein Charakter in einer Ini-Phase zurücklegen kann">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+               </tr>
+               <tr style="width: 120px;">
+                  <td nowrap align="center"><input type="number" name="data.MagicPower.value" style="width:35px; text-align:center;" title="Magie-Runden" value="{{actor.data.MagicPower.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.FaithPower.value" style="width:35px; text-align:center;" title="Segens-Runden" value="{{actor.data.FaithPower.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.SpiritPower.value" style="width:35px; text-align:center;" title="Askese-Runden" value="{{actor.data.SpiritPower.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.MainPower.value" style="width:35px; text-align:center;" title="Aktions-Runden" value="{{actor.data.MainPower.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.Initiative.value" style="width:35px; text-align:center;" title="Initiavive-Bonus" value="{{actor.data.Initiative.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.Stamina.value" style="width:35px; text-align:center;" title="Ausdauer" value="{{actor.data.Stamina.value}}" disabled="true"></td>         
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </ol>
+</div>
+
+<p><label style="width: 150px; color: rgb(0, 0, 0); text-align:left;">Gesundheits Werte</label></p>
+<div class="section-body">
+	<ol class="features-list item-list">
+      <div class="item attribute flexrow">
+         <table class="attribute_center" border="2">
+            <tbody>
+               <tr>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Lebenspunkte</label>
+                     <span style="width: 50px;" title="Die physische Gesundheit des Charakters">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Schadenspunkte</label>
+                     <span style="width: 50px;" title="Der Schaden den erlitten hat">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Schadens-Malus</label>
+                     <span style="width: 50px;" title="Der Abzug bei Würfen der auf dem erlittenen Schaden resultiert">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Todesschwelle</label>
+                     <span style="width: 50px;" title="Der Bereich der Gesundheit von der Bewusstlosigkeit bis zum definitiven Tod">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Komarunden</label>
+                     <span style="width: 50px;" title="Die Zeitspanne in Runden, um in den pos. Gesundheitsbereich [+1] zu gelangen">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Heilungsmenge</label>
+                     <span style="width: 50px;" title="Der Heilungsbasiswert, welcher sich aus der Konstitution errechnen lässt">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+               </tr>
+               <tr style="width: 120px;">
+                  <td nowrap align="center"><input type="number" name="data.LP.value" style="width:35px; text-align:center;" title="Lebenspunkte" value="{{actor.data.LP.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.Damage.value" style="width:35px; text-align:center;" title="Schadenspunkte" value="{{actor.data.Damage.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.Penalty.value" style="width:35px; text-align:center;" title="Schadens-Malus" value="{{actor.data.Penalty.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.DeathThreshold.value" style="width:35px; text-align:center;" title="Todesschwelle" value="{{actor.data.DeathThreshold.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.ComaRounds.value" style="width:35px; text-align:center;" title="Komarunden" value="{{actor.data.ComaRounds.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.HealBase.value" style="width:35px; text-align:center;" title="Heilungsmenge" value="{{actor.data.HealBase.value}}" disabled="true"></td>         
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </ol>
+</div>
+
+<p><label style="width: 150px; color: rgb(0, 0, 0); text-align:left;">Kampfspezifische Werte</label></p>
+<div class="section-body">
+	<ol class="features-list item-list">
+      <div class="item attribute flexrow">
+         <table class="attribute_center" border="2">
+            <tbody>
+               <tr>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Ausweichen</label>
+                     <span style="width: 50px;" title="Die Kunst Angriffe zu entgehen">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Parieren</label>
+                     <span style="width: 50px;" title="Die Kunst Angriffe abzuwehren">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Resistieren</label>
+                     <span style="width: 50px;" title="Die Menge der Schadensreduzierung">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Nahkampfwert</label>
+                     <span style="width: 50px;" title="Die Kunst des Treffens im Nahkampf">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Fernkampfwert</label>
+                     <span style="width: 50px;" title="Der Kunst des Treffens im Fernkampf">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+                  <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);">Rüstungswert</label>
+                     <span style="width: 50px;" title="Die Menge an Schaden die durch Rüstung abgehalten wird">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+               </tr>
+               <tr style="width: 120px;">
+                  <td nowrap align="center"><input type="number" name="data.Dodge.value" style="width:35px; text-align:center;" title="Ausweichen-Wert" value="{{actor.data.Dodge.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.Parry.value" style="width:35px; text-align:center;" title="Parier-Wert" value="{{actor.data.Parry.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.Resist.value" style="width:35px; text-align:center;" title="Resistenz-Wert" value="{{actor.data.Resist.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.MeleeValue.value" style="width:35px; text-align:center;" title="Nahkampf-Wert" value="{{actor.data.MeleeValue.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="data.RangedCombatValue.value" style="width:35px; text-align:center;" title="Fernkampf-Wert" value="{{actor.data.RangedCombatValue.value}}" disabled="true"></td>
+                  <td nowrap align="center"><input type="number" name="alculatedArmor" style="width:35px; text-align:center;" title="Rüstungs-Wert" value="{{calculatedArmor}}" disabled="true"></td>         
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </ol>
+</div>

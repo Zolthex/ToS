@@ -1,0 +1,77 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+		<h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
+	</header>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<th colspan="9" nowrap align="center"><span align="center" style="text-align: center;">Waffeninformationen:</span></th>
+			</tr>
+			<tr>
+				<td nowrap align="center">Typus: </td>
+				<td nowrap align="center">Verzauberung: </td>
+				<td nowrap align="center">Bezeichnung: </td>
+			</tr>
+			<tr>
+
+			<!--<td nowrap align="center"><input name="data.Type.value" type="text" value="{{data.Type.value}}" placeholder="{{ localize 'Name' }}" /></td>-->
+
+				<td nowrap align="center">
+					<select name="data.Typus.value" id="data.Type.value" style="width: 200px" placeholder="{{data.Typus.value}}">
+						{{#select data.Typus.value}}
+							<option id="data.Typus.value" value="{{data.Typus.value}}" hidden="hidden" selected="selected">{{data.Typus.value}}</option>
+							<option type="text" style="width: 45px" value="Waffenlos">Waffenlos</option>
+							<option type="text" style="width: 45px" value="Hiebwaffen">Hiebwaffen</option>
+							<option type="text" style="width: 45px" value="Klingenwaffen">Klingenwaffen</option>
+							<option type="text" style="width: 45px" value="Fechtwaffen">Fechtwaffen</option>
+							<option type="text" style="width: 45px" value="Kettenwaffen">Kettenwaffen</option>
+							<option type="text" style="width: 45px" value="Langwaffen">Langwaffen</option>
+							<option type="text" style="width: 45px" value="Peitschenwaffen">Peitschenwaffen</option>
+							<option type="text" style="width: 45px" value="Exotische Waffen">Exotische Waffen</option>
+						{{/select}}
+					</select>
+				</td>
+
+				<td nowrap align="center"><input name="data.EnchantValue.value" type="number" value="{{data.EnchantValue.value}}" placeholder="{{ localize 'Name' }}" /></td>
+
+				<td nowrap align="center">
+					<select name="data.TypeName.value" id="data.Type.value" style="width: 200px" placeholder="{{data.TypeName.value}}">
+						{{#select data.TypeName.value}}
+							<option id="data.TypeName.value" value="{{data.TypeName.value}}" hidden="hidden" selected="selected">{{data.TypeName.value}}</option>
+							<option type="text" style="width: 45px" value="Unarmed">Waffenlos</option>
+							<option type="text" style="width: 45px" value="CuttingWeapons">Hiebwaffen</option>
+							<option type="text" style="width: 45px" value="BladedWeapons">Klingenwaffen</option>
+							<option type="text" style="width: 45px" value="FencingWeapons">Fechtwaffen</option>
+							<option type="text" style="width: 45px" value="ChainWeapons">Kettenwaffen</option>
+							<option type="text" style="width: 45px" value="LongarmWeapons">Langwaffen</option>
+							<option type="text" style="width: 45px" value="WhipWeapons">Peitschenwaffen</option>
+							<option type="text" style="width: 45px" value="ExoticWeapons">Exotische Waffen</option>
+						{{/select}}
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td nowrap align="center">Schaden: </td>
+				<td nowrap align="center">Bonus: </td>
+				<td nowrap align="center">Kategorie: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><input name="data.WeaponDamage.value" type="number" value="{{data.WeaponDamage.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.CategoryValue.value" type="number" value="{{data.CategoryValue.value}}" placeholder="{{ localize 'Name' }}" /></td>
+				<td nowrap align="center"><input name="data.Category.value" type="text" value="{{data.Category.value}}" placeholder="{{ localize 'Name' }}" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<td nowrap align="center">Beschreibung: </td>
+			</tr>
+			<tr>
+				<td nowrap align="center"><textarea style="width: 450px; height: 100px;" name="data.ItemDiscription.value" title="FeatDiscription" placeholder="{{ localize 'Name' }}">{{data.ItemDiscription.value}}</textarea></td>				
+			</tr>
+		</tbody>
+	</table>
+</form>

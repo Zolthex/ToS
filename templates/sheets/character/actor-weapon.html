@@ -1,0 +1,192 @@
+<!--
+	<table class="attribute_center" border="2">
+		<tbody>
+			<tr>
+				<th nowrap style="width: 50px;">
+					<label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Initiativephase</label>
+				</th>
+
+				<th nowrap style="width: 50px;">
+					<label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Erholungsphase</label>
+				</th>
+			</tr>
+
+			<tr style="width: 120px;">
+				<td nowrap align="center" class="rollable" data-roll-type="attribute">
+					<button type="button" data-toe-roll="1d6" data-toe-ini="data.Ini_Bonus.value" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button>
+				</td>
+
+				<td nowrap align="center">
+					<button type="button" data-toe-abroll="1d6" data-toe-heal="data.HealBase.value" data-toe-heal="data.ChannelResources.ManaReg" title="Klicken zum Würfeln" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+-->
+
+<div>
+	Initiativewurf: &nbsp;<button type="button" class="Restore_Resources" data-toe-iniroll="1d6"></button> &nbsp;
+	<input type="number" name="data.Ini_Bonus.value" style="width:35px; text-align:center;" title="Ini-Bonus Wert" value="{{actor.data.Ini_Bonus.value}}" disabled="true">
+
+	&nbsp;&nbsp;&nbsp;&nbsp; Erlittener Schaden: &nbsp;<button type="button" class="Restore_Resources" data-toe-dmgchange="GetDamage"></button> &nbsp;
+	<input type="number" name="data.GetDamage.value" style="width:35px; text-align:center;" title="Schadens-Wert" value="{{actor.data.GetDamage.value}}">
+
+	&nbsp;&nbsp;&nbsp;&nbsp; Erholungsumgebung: &nbsp;<button type="button" class="Restore_Resources" data-toe-healroll="1d6"></button> &nbsp;
+
+	<select name="data.toeHealplace.value" id="data.toeHealplace.value" style="width: 200px" placeholder="{{data.toeHealplace.value}}">
+		{{#select data.toeHealplace.value}}
+			<option id="data.Typus.value" value="{{data.Typus.value}}" hidden="hidden" selected="selected">{{data.toeHealplace.value}}</option>
+			<option type="text" style="width: 45px" value="-1">Boden ungepolstert</option>
+			<option type="text" style="width: 45px" value="0">Boden gepolstert</option>
+			<option type="text" style="width: 45px" value="1">Zimmer ohne Bett</option>
+			<option type="text" style="width: 45px" value="2">Zimmer mit Bett</option>
+			<option type="text" style="width: 45px" value="3">Zimmer mit Einzelbett</option>
+			<option type="text" style="width: 45px" value="4">Suite</option>
+			<option type="text" style="width: 45px" value="5">Edel-Suite</option>
+		{{/select}}
+	</select>
+
+</div>
+
+<br>
+
+<label style="width: 150px; color: rgb(0, 0, 0); text-align: left;">Nahkampf</label>
+<div class="section-body">
+	<ol class="weapon-list item-list">
+		{{#each weapons as |weapon weaponsId|}}
+			<div class="item weapon flexrow" data-item-id="{{weapon._id}}">
+				<table class="attribute_center" border="2">
+					<tbody>
+                  <tr>
+                     <th nowrap colspan="2" style="width: 150px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Waffe</label></th>
+                     <th nowrap style="width: 115px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Typus</label></th>
+                     <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Verzauberung</label></th>
+                     <th nowrap style="width: 60px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Schaden</label></th>
+                     <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Bonus</label></th>
+                     <th nowrap style="width: 115px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Kategorie</label></th>
+					 <th nowrap style="width: 80px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Makro</label></th>
+                     <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Entfernen</label></th>
+                  </tr>
+                  <tr style="width: 120px;">
+                    <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);"><a class="item-edit">{{weapon.name}}</a></label></td>
+                    <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="{{data.ItemDiscription.value}}">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+					
+					<td nowrap align="center">
+						<input type="hidden" class="" style="width:100px; text-align:center;" title="{{weapon.name}}-Wert" value="{{weapon.data.TypeName.value}}" placeholder="Typus" disabled="true"/>
+						<input type="text" class="" style="width:100px; text-align:center;" title="{{weapon.name}}-Wert" value="{{weapon.data.Typus.value}}" placeholder="Typus" disabled="true"/>
+					</td>
+				  <!--javascript:Simple() onChange="PruefeObZahl(this.form.Alter.value)"-->
+					<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{weapon.name}}-Wert" value="{{weapon.data.EnchantValue.value}}" placeholder="0" disabled="true"/></td>
+					<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{weapon.name}}-Wert" value="{{weapon.data.WeaponDamage.value}}" placeholder="0" disabled="true"/></td>
+					<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{weapon.name}}-Wert" value="{{weapon.data.CategoryValue.value}}" placeholder="0" disabled="true"/></td>
+					<td nowrap align="center"><input type="text" class="" style="width:100px; text-align:center;" title="{{weapon.name}}-Wert" value="{{weapon.data.Category.value}}" placeholder="0" disabled="true"/></td>
+					<td nowrap align="center" class="rollable" data-roll-type="item">&nbsp;<button type="button" style="background-image:url(../../systems/toeloria/icons/sword_klein.png); height: 27px; width: 27px;"></button>&nbsp;</td>
+					<td nowrap align="center" ><span class="item-delete delete">&nbsp;<i class="fas fa-trash"></i>&nbsp;</span></td>
+                  </tr>
+               </tbody>
+            </table>
+			</div>
+		{{/each}}
+	</ol>
+</div>
+
+----------------------------------------------------------
+<br><hr>
+
+<label style="width: 150px; color: rgb(0, 0, 0); text-align: left;"></label>Fernkampf</label>
+<div class="section-body">
+	<ol class="gun-list item-list">
+		{{#each guns as |gun gunsId|}}
+			<div class="item gun flexrow" data-item-id="{{gun._id}}">
+				<table class="attribute_center" border="2">
+					<tbody>
+                  <tr>
+                     <th nowrap colspan="2" style="width: 150px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Waffe</label></th>
+                     <th nowrap style="width: 115px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Typus</label></th>
+                     <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Verzauberung</label></th>
+                     <th nowrap style="width: 60px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Schaden</label></th>
+                     <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Bonus</label></th>
+                     <th nowrap style="width: 115px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Kategorie</label></th>
+					 <th nowrap style="width: 80px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Makro</label></th>
+                     <th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Entfernen</label></th>
+                  </tr>
+                  <tr style="width: 120px;">
+                    <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);"><a class="item-edit">{{gun.name}}</a></label></td>
+                    <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="{{data.ItemDiscription.value}}">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+					
+					<td nowrap align="center">
+						<input type="hidden" class="" style="width:100px; text-align:center;" title="{{gun.name}}-Wert" value="{{gun.data.TypeName.value}}" placeholder="Typus" disabled="true"/>
+						<input type="text" class="" style="width:100px; text-align:center;" title="{{gun.name}}-Wert" value="{{gun.data.Typus.value}}" placeholder="Typus" disabled="true"/>
+					</td>
+				  <!--javascript:Simple() onChange="PruefeObZahl(this.form.Alter.value)"-->
+					<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{gun.name}}-Wert" value="{{gun.data.EnchantValue.value}}" placeholder="0" disabled="true"/></td>
+					<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{gun.name}}-Wert" value="{{gun.data.WeaponDamage.value}}" placeholder="0" disabled="true"/></td>
+					<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{gun.name}}-Wert" value="{{gun.data.CategoryValue.value}}" placeholder="0" disabled="true"/></td>
+					<td nowrap align="center"><input type="text" class="" style="width:100px; text-align:center;" title="{{gun.name}}-Wert" value="{{gun.data.Category.value}}" placeholder="0" disabled="true"/></td>
+					<td nowrap align="center" class="rollable" data-roll-type="item">&nbsp;<button type="button" style="background-image:url(../../systems/toeloria/icons/aiming_klein.png); height: 27px; width: 27px;"></button>&nbsp;</td>
+					<td nowrap align="center" ><span class="item-delete delete">&nbsp;<i class="fas fa-trash"></i>&nbsp;</span></td>
+                  </tr>
+               </tbody>
+            </table>
+			</div>
+		{{/each}}
+	</ol>
+</div>
+
+----------------------------------------------------------
+<br><hr>
+
+<label style="width: 150px; color: rgb(0, 0, 0); text-align: left;">Verteidigung</label>
+<!--
+
+	<table class="attribute_center" border="2">
+		<tbody>
+			<tr>
+				<th nowrap colspan="2" style="width: 150px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Verteidigungswürfe</label></th>
+			</tr>
+			<tr style="width: 120px;">
+				<td nowrap align="center" class="rollable" data-roll-type="item">
+					&nbsp;&nbsp;Ausweichen&nbsp;&nbsp;<button type="button" data-toe-abroll="1d12" data-toe-ability="Music" data-toe-abilattr="Dexterity" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button>&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<td nowrap align="center" class="rollable" data-roll-type="item">
+					&nbsp;&nbsp;Parrieren&nbsp;&nbsp;<button type="button" class="rollable" data-roll-type="item" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button>&nbsp;&nbsp;
+			</tr>
+		</tbody>
+	</table>
+-->
+<div class="section-body">
+	<ol class="armor-list item-list">
+		{{#each armors as |armor armorsId|}}
+			<div class="item armor flexrow" data-item-id="{{armor._id}}">
+				<table class="attribute_center" border="2">
+					<tbody>
+						<tr>
+							<th nowrap colspan="2" style="width: 150px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Rüstung</label></th>
+							<th nowrap style="width: 115px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Typus</label></th>
+							<th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Verzauberung</label></th>
+							<th nowrap style="width: 60px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Schutz</label></th>
+							<th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Bonus</label></th>
+							<th nowrap style="width: 115px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Kategorie</label></th>
+							<th nowrap style="width: 80px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Makro</label></th>
+							<th nowrap style="width: 50px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Entfernen</label></th>
+						</tr>
+						<tr style="width: 120px;">
+							<td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);"><a class="item-edit">{{armor.name}}</a></label></td>
+							<td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="{{data.ItemDiscription.value}}">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>
+							<td nowrap align="center"><input type="text" class="" style="width:100px; text-align:center;" title="{{armor.name}}-Wert" value="{{armor.data.Type.value}}" placeholder="Typus" disabled="true"/></td>
+							<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{armor.name}}-Wert" value="{{armor.data.EnchantValue.value}}" placeholder="0" disabled="true"/></td>
+							<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{armor.name}}-Wert" value="{{armor.data.ArmorProtection.value}}" placeholder="0" disabled="true"/></td>
+							<td nowrap align="center"><input type="number" class="" style="width:35px; text-align:center;" title="{{armor.name}}-Wert" value="{{armor.data.CategoryValue.value}}" placeholder="0" disabled="true"/></td>
+							<td nowrap align="center"><input type="text" class="" style="width:100px; text-align:center;" title="{{armor.name}}-Wert" value="{{armor.data.Category.value}}" placeholder="0" disabled="true"/></td>
+							<td nowrap align="center">
+								<button type="button" class="rollable" data-roll-type="item"data-roll-def="Ausweichen" style="background-image:url(../../systems/toeloria/icons/dodging_klein.png); height: 27px; width: 27px;"></button>&nbsp;&nbsp;
+								<button type="button" class="rollable" data-roll-type="item"data-roll-def="Abwehr" style="background-image:url(../../systems/toeloria/icons/shield_klein.png); height: 27px; width: 27px;"></button>
+							</td>
+							<td nowrap align="center" ><span class="item-delete delete">&nbsp;<i class="fas fa-trash"></i>&nbsp;</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		{{/each}}
+	</ol>
+</div>

@@ -1,0 +1,87 @@
+<label style="width: 150px; color: rgb(0, 0, 0); text-align: center">Informations Bereich</label>
+
+<div class="section-body">
+	<ol class="features-list item-list">
+      	<div class="item attribute flexrow">
+			<table class="attribute_center" border="2">
+				<tbody>
+					<tr>
+						<th nowrap style="width: 120px"><label class="sheet-table-header" style="width: 120px; text-align: center; color: rgb(0, 0, 0)">Ressource</label>         
+							<span style="width: 50px;" title="Die gesammelte Lebenserfahrung"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+						<th nowrap style="width: 75px"><label class="sheet-table-header" style="width: 75px; text-align: center; color: rgb(0, 0, 0)">Wert (aktuell)</label></th>
+						<th nowrap style="width: 75px"><label class="sheet-table-header" style="width: 75px; text-align: center; color: rgb(0, 0, 0)">Wert (gesamt)</label></th>
+						<th nowrap style="width: 120px"><label class="sheet-table-header" style="width: 120px; text-align: center; color: rgb(0, 0, 0)">Ressource</label>
+							<span style="width: 50px;" title="Die Stärke der Aura"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+						<th nowrap style="width: 75px"><label class="sheet-table-header" style="width: 75px; text-align: center; color: rgb(0, 0, 0)">Wert (aktuell)</label></th>
+						<th nowrap style="width: 75px"><label class="sheet-table-header" style="width: 75px; text-align: center; color: rgb(0, 0, 0)">Wert (gesamt)</label></th>
+						<th nowrap style="width: 120px"><label class="sheet-table-header" style="width: 120px; text-align: center; color: rgb(0, 0, 0)">Ressource</label>
+							<span style="width: 50px;" title="Der Segen des Kosmos"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></th>
+						<th nowrap style="width: 75px"><label class="sheet-table-header" style="width: 75px; text-align: center; color: rgb(0, 0, 0)">Wert (aktuell)</label></th>
+						<th nowrap style="width: 75px"><label class="sheet-table-header" style="width: 75px; text-align: center; color: rgb(0, 0, 0)">Wert (gesamt)</label></th>
+					</tr>
+					<tr style="width: 120px">
+						<td nowrap align="center" style="width: 120px">Erfahrungspunkte</td>
+						<td nowrap align="center"><input type="number" name="data.XP.value" style="width: 35px; text-align: center" title="Erfahrungspunkte aktuell" value="{{actor.data.XP.value}}" /></td>
+						<td nowrap align="center"><input type="number" name="data.XPcom.value" style="width: 35px; text-align: center" title="Erfahrungspunkte gesamt" value="{{actor.data.XPcom.value}}" /></td>
+						<td nowrap align="center" style="width: 120px">Essenzpunkte</td>
+						<td nowrap align="center"><input type="number" name="data.EP.value" style="width: 35px; text-align: center" title="Essenzpunkte aktuell" value="{{actor.data.EP.value}}" /></td>
+						<td nowrap align="center"><input type="number" class="value attr-edit" data-field="data.EPcom.value" data-att="EPcom" name="data.EPcom.value" style="width: 35px; text-align: center" title="Essenzpunkte gesamt" value="{{actor.data.EPcom.value}}" /></td>
+						<td nowrap align="center" style="width: 120px">Kosmospunkte</td>
+						<td nowrap align="center"><input type="number" name="data.CP.value" style="width: 35px; text-align: center" title="Kosmospunkte aktuell" value="{{actor.data.CP.value}}" /></td>
+						<td nowrap align="center"><input type="number" name="data.CPcom.value" style="width: 35px; text-align: center" title="Kosmospunkte gesamt" value="{{actor.data.CPcom.value}}" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</ol>
+</div>
+
+<br />
+<div class="section-body">
+	<ol class="features-list item-list">
+      	<div class="item attribute flexrow">
+			<table class="attribute_center" border="2">
+				<tbody>
+					<tr>
+						<th nowrap colspan="2" style="width: 120px"><label class="sheet-table-header" style="width: 120px; text-align: center; color: rgb(0, 0, 0)">Status</label></th>
+						<th nowrap style="width: 82px"><label class="sheet-table-header" style="width: 82.5px; text-align: center; color: rgb(0, 0, 0)">Wert</label></th>
+						<th colspan="2" nowrap style="width: 120px"><label class="sheet-table-header" style="width: 120px; text-align: center; color: rgb(0, 0, 0)">Status</label></th>
+						<th nowrap style="width: 82px"><label class="sheet-table-header" style="width: 82.5px; text-align: center; color: rgb(0, 0, 0)">Wert</label></th>
+						<th nowrap colspan="2" style="width: 120px"><label class="sheet-table-header" style="width: 120px; text-align: center; color: rgb(0, 0, 0)">Status</label></th>
+						<th nowrap style="width: 82px"><label class="sheet-table-header" style="width: 82.5px; text-align: center; color: rgb(0, 0, 0)">Wert</label></th>
+						<th nowrap colspan="2" style="width: 120px"><label class="sheet-table-header" style="width: 120px; text-align: center; color: rgb(0, 0, 0)">Status</label></th>
+						<th nowrap style="width: 82px"><label class="sheet-table-header" style="width: 82.5px; text-align: center; color: rgb(0, 0, 0)">Wert</label></th>
+					</tr>
+					<tr style="width: 120px">
+						<td nowrap align="center" style="width: 80px; border-right: 1px;">Alter</td>
+							<td nowrap align="center" style="width: 40px; border-left: 1px;"><span style="width: 50px;" title="Das Alter des Charakters"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></td>
+						<td nowrap align="center"><input type="number" name="data.Age.value" style="width: 35px; text-align: center" title="Alter" value="{{actor.data.Age.value}}" /></td>
+						<td nowrap align="center" style="width: 80px; border-right: 1px;">Geschlecht</td>
+							<td nowrap align="center" style="width: 40px; border-left: 1px;"><span style="width: 50px;" title="Das Geschlecht des Charakters"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></td>
+						<td nowrap align="center"><input type="text" name="data.Sex.value" style="width: 35px; text-align: center" title="Geschlecht" value="{{actor.data.Sex.value}}" /></td>
+						<td nowrap align="center" style="width: 80px; border-right: 1px;">Grösse</td>
+							<td nowrap align="center" style="width: 40px; border-left: 1px;"><span style="width: 50px;" title="Die Grösse des Charakters"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></td>
+						<td nowrap align="center"><input type="number" name="data.Height.value" style="width: 35px; text-align: center" title="Gewicht" value="{{actor.data.Height.value}}" /></td>
+						<td nowrap align="center" style="width: 80px; border-right: 1px;">Gewicht</td>
+							<td nowrap align="center" style="width: 40px; border-left: 1px;"><span style="width: 50px;" title="Das Gewicht des Charakters"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></td>
+						<td nowrap align="center"><input type="number" name="data.Weight.value" style="width: 35px; text-align: center" title="Grösse" value="{{actor.data.Weight.value}}" /></td>
+					</tr>
+					<tr style="width: 120px">
+						<td nowrap align="center" style="width: 80px; border-right: 1px;">Augenfarbe</td>
+							<td nowrap align="center" style="width: 40px; border-left: 1px;"><span style="width: 50px;" title="Das Augenfarbe(n) des Charakters"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></td>
+						<td nowrap align="center"><input type="text" name="data.Eyecolor.value" style="width: 75px; text-align: center" title="Augenfarbe" value="{{actor.data.Eyecolor.value}}" /></td>
+						<td nowrap align="center" style="width: 80px; border-right: 1px;">Haarfarbe</td>
+							<td nowrap align="center" style="width: 40px; border-left: 1px;"><span style="width: 50px;" title="Das Haarfarbe(n) des Charakters"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></td>
+						<td nowrap align="center"><input type="text" name="data.Haircolor.value" style="width: 75px; text-align: center" title="Haarfarbe" value="{{actor.data.Haircolor.value}}" /></td>
+						<td nowrap align="center" style="width: 80px; border-right: 1px;">Herkunft</td>
+							<td nowrap align="center" style="width: 40px; border-left: 1px;"><span style="width: 50px;" title="Der Ort der Geburt des Charakters"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></td>
+						<td nowrap align="center"><input type="text" name="data.Origin.value" style="width: 75px; text-align: center" title="Herkunft" value="{{actor.data.Origin.value}}" /></td>
+						<td nowrap align="center" style="width: 80px; border-right: 1px;">Glaube</td>
+							<td nowrap align="center" style="width: 40px; border-left: 1px;"><span style="width: 50px;" title="Der Glaube des Charakters"><img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span></td>
+						<td nowrap align="center"><input type="text" name="data.Faith.value" style="width: 75px; text-align: center" title="Glaube" value="{{actor.data.Faith.value}}" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</ol>
+</div>

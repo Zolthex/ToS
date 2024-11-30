@@ -1,0 +1,81 @@
+{
+	"name": "toeloria",
+	"title": "Tales of Eloria",
+	"description": "A Fantasy/Pre-Steampunk System written by Zolthex",
+	"author": "Zolthex",
+	"version": "0.2021.09",
+	"minimumCoreVersion": "0.8.9",
+	"compatibleCoreVersion": "0.8.9",
+	"esmodules": ["module/toeloria.js"],
+	"styles": ["css/toeloria.css"],
+	"scripts": [],
+	"packs": [
+		{
+		  "label": "Item",
+		  "entity": "Item",
+		  "name": "item",
+		  "path": "packs/item.db",
+		  "system": "toeloria",
+		  "package": "toeloria",
+		  "private": false
+		},
+		{
+			"label": "Fähigkeiten",
+			"entity": "Item",
+			"name": "fahigkeiten",
+			"path": "packs/fahigkeiten.db",
+			"system": "toeloria",
+			"package": "toeloria",
+			"private": false
+		  },
+		  {
+			"label": "Fertigkeiten (speziell)",
+			"entity": "Item",
+			"name": "fertigkeiten-speziell",
+			"path": "packs/fertigkeiten-speziell.db",
+			"system": "toeloria",
+			"package": "toeloria",
+			"private": false
+		  },
+		  {
+			"label": "Waffen & Rüstungen",
+			"entity": "Item",
+			"name": "waffen-and-rustungen",
+			"path": "packs/waffen-and-rustungen.db",
+			"system": "toeloria",
+			"package": "toeloria",
+			"private": false
+		  },
+		  {
+			"label": "Nichtspieler Charaktere",
+			"entity": "Actor",
+			"name": "nichtspieler-charaktere",
+			"path": "packs/nichtspieler-charaktere.db",
+			"system": "toeloria",
+			"package": "toeloria",
+			"private": false
+		  },
+		  {
+			"label": "Gegnerische Charaktere",
+			"entity": "Actor",
+			"name": "gegnerische-charaktere",
+			"path": "packs/gegnerische-charaktere.db",
+			"system": "toeloria",
+			"package": "toeloria",
+			"private": false
+		  },
+		  {
+			"label": "Essen & Proviant",
+			"entity": "Item",
+			"name": "essen-and-proviant",
+			"path": "packs/essen-and-proviant.db",
+			"system": "toeloria",
+			"package": "toeloria",
+			"private": false
+		  }		
+	  ],
+	"languages": [],
+	"initiative": "1d6 + @Ini_Bonus",
+	"gridDistance": 1,
+	"gridUnits": "m"
+}

@@ -1,0 +1,63 @@
+.window-app.toeloria.sheet.CharSheet
+ {
+	max-width: 860px;
+	min-width: 860px;
+  }
+  
+.biography,
+.biography > .editor,
+.biography .tox {
+	display: flex;
+	flex-direction: column;
+	min-height: 300px;
+	width: 100%;
+}
+
+.attribute_center {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.textcolor {
+	color: rgb(126, 38, 38);
+}
+
+.item.flexrow {
+    width: fit-content;
+}
+
+.item.attribute.flexrow {
+    width: fit-content;
+}
+
+
+.Restore_Resources {
+	background-image:url(../icons/d12_kl.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: bottom;
+	height: 27px; 
+	width: 27px;
+	padding: 0;
+	margin: 0;
+}
+
+/*
+.window-app {
+	resize: vertical;
+}
+
+.app.window-app.actor-sheet {
+	resize: vertical;
+}
+
+.app.window-app.toeloria.sheet.CharSheet {
+	resize: vertical;
+}
+
+.resizable {
+	resize: vertical;
+	overflow: scroll;
+}
+*/

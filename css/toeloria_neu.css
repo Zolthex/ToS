@@ -1,0 +1,67 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h3 {
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.toetabs {
+	width: 600px;
+	display: block;
+	margin: 40px auto;
+	position: relative;
+}
+
+.toetabs .toetab {
+	float: left;
+	display: block;
+}
+
+.toetabs .toetab > input[type="radio"] {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.toetabs .toetab > label {
+	display: block;
+	padding: 6px 21px;
+	font-size: 12px;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	color: #fff;
+	background: #4a83fd;
+}
+
+.toetabs .toecontent {
+	z-index: 0; /* or display: none; */
+	overflow: hidden;
+	width: 600px;
+	padding: 25px;
+	position: absolute;
+	top: 27px;
+	left: 0;
+	background: #303030;
+	color: #dfdfdf;
+
+	opacity: 0;
+	transition: opacity 400ms ease-out;
+}
+
+.toetabs > .toetab > [id^="toetab"]:checked + label {
+	top: 0;
+	background: #303030;
+	color: #f5f5f5;
+}
+
+.toetabs > .toetab > [id^="toetab"]:checked ~ [id^="toetab-content"] {
+	z-index: 1; /* or display: block; */
+
+	opacity: 1;
+	transition: opacity 400ms ease-out;
+}

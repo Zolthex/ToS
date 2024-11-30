@@ -1,0 +1,1 @@
+{"name":"Ingenieurskunst","type":"Fertigkeiten","img":"icons/svg/item-bag.svg","data":{"ItemDiscription":{"name":"Beschreibung","value":""},"formula":"1d12 + @Mind.value"},"effects":[],"folder":null,"sort":0,"permission":{"default":0,"oOvjGmVZjEoLTlAU":3},"flags":{"core":{"sourceId":"Item.NzFOabVXZnBOtZVR"}},"_id":"69rUELezORyyrrX9"}

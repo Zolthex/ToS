@@ -1,0 +1,646 @@
+{
+	"Actor": {
+		"types": ["Charakter", "NPC", "Elite", "Boss", "Token"],
+		"templates": {
+			"mainattributes": {
+				"Strength": {
+					"name": "Körperkraft",
+					"value": 1
+				},
+				"Dexterity": {
+					"name": "Geschicklichkeit",
+					"value": 1
+				},
+				"Perception": {
+					"name": "Reflexe & Sinne",
+					"value": 1
+				},
+
+				"Mind": {
+					"name": "Verstand",
+					"value": 1
+				},
+				"Soul": {
+					"name": "Seelenkraft",
+					"value": 1
+				},
+				"Spirit": {
+					"name": "Askese",
+					"value": 1
+				},
+
+				"Charisma": {
+					"name": "Charisma",
+					"value": 1
+				},
+				"Manipulation": {
+					"name": "Manipulation",
+					"value": 1
+				},
+				"Diplomacy": {
+					"name": "Diplomatie",
+					"value": 1
+				},
+
+				"Intuition": {
+					"name": "Intuition",
+					"value": 1
+				},
+				"SenseOfDanger": {
+					"name": "Gefahrensinn",
+					"value": 1
+				},
+				"CosmosConsistent": {
+					"name": "Kosmos-Einklang",
+					"value": 1
+				},
+				"Evade": {
+					"name": "Ausweichen",
+					"value": 1
+				},
+				"Thwart": {
+					"name": "Abwehren",
+					"value": 1
+				},
+				"Sustain": {
+					"name": "Aushalten",
+					"value": 1
+				},
+				"Initiative": {
+					"name": "Initiative",
+					"value": 0
+				}
+			},
+			"subattributes": {
+				"MainPower": {
+					"name": "Allgemeine Runden",
+					"value": 0
+				},
+				"MagicPower": {
+					"name": "Magierunden",
+					"value": 0
+				},
+				"FaithPower": {
+					"name": "Glaubensrunden",
+					"value": 0
+				},
+				"SpiritPower": {
+					"name": "Askeserunden",
+					"value": 0
+				},
+				"WillMainPower": {
+					"name": "Willenskraft",
+					"value": 0
+				},
+
+				"Stamina": {
+					"name": "Ausdauer",
+					"value": 0
+				},
+				"Ini_Bonus": {
+					"name": "Initiative_Bonus",
+					"value": 0
+				},	
+				"LP": {
+					"name": "Lebenspunkte",
+					"value": 0
+				},
+				"Damage": {
+					"name": "Schadenspunkte",
+					"value": 0
+				},
+				"TempDamage": {
+					"name": "Temporäre Schadenspunkte",
+					"value": 0
+				},
+				"GetDamage": {
+					"name": "Erhaltene Schadenspunkte",
+					"value": 0
+				},
+				"Penalty": {
+					"name": "Schadens-Malus",
+					"value": 0
+				},
+				"DeathThreshold": {
+					"name": "Todesschwelle",
+					"value": 0
+				},
+				"ComaRounds": {
+					"name": "Komarunden",
+					"value": 0
+				},
+				"HealBase": {
+					"name": "Heilungsmenge",
+					"value": 0
+				},
+				"HealPlace": {
+					"name": "Heilungsort",
+					"value": 0
+				},
+
+				"Dodge": {
+					"name": "Ausweichen",
+					"value": 0
+				},
+				"Parry": {
+					"name": "Parieren",
+					"value": 0
+				},
+				"Resist": {
+					"name": "Resistieren",
+					"value": 0
+				},
+				"MeleeValue": {
+					"name": "Nahkampfwert",
+					"value": 0
+				},
+				"RangedCombatValue": {
+					"name": "Fernkampfwert",
+					"value": 0
+				},
+				"Armor": {
+					"name": "Rüstungswert",
+					"value": 0
+				},
+				"AngRoll": {
+					"name": "Angriffswurf",
+					"value": 0
+				}
+
+			},
+			"features": {
+				"Melee": {
+					"name": "Nahkampf",
+					"value": 0
+				},
+				"Unarmed": {
+					"name": "Waffenlos",
+					"value": 0
+				},
+				"CuttingWeapons": {
+					"name": "Hiebwaffen",
+					"value": 0
+				},
+				"BladedWeapons": {
+					"name": "Klingenwaffen",
+					"value": 0
+				},
+				"FencingWeapons": {
+					"name": "Fechtwaffen",
+					"value": 0
+				},
+				"ChainWeapons": {
+					"name": "Kettenwaffen",
+					"value": 0
+				},
+				"LongarmWeapons": {
+					"name": "Langwaffen",
+					"value": 0
+				},
+				"WhipWeapons": {
+					"name": "Peitschenwaffen",
+					"value": 0
+				},
+				"ExoticWeapons": {
+					"name": "Exotische Waffen",
+					"value": 0
+				},
+				"RangedCombat": {
+					"name": "Fernkampf",
+					"value": 0
+				},
+				"Blowpipes": {
+					"name": "Blasrohr",
+					"value": 0
+				},
+				"ThrowingWeapons": {
+					"name": "Wurfwaffen",
+					"value": 0
+				},
+				"BowNCrossbow": {
+					"name": "Bogen & Armbrust",
+					"value": 0
+				},
+				"PistolsNRevolvers": {
+					"name": "Pistolen & Revolver",
+					"value": 0
+				},
+				"RiflesNShotguns": {
+					"name": "Gewehre & Flinten",
+					"value": 0
+				},
+				"PressureGuns": {
+					"name": "Dampfdruckwaffen",
+					"value": 0
+				},
+				"Perseverance": {
+					"name": "Durchhaltevermögen",
+					"value": 0
+				},
+				"Steadfastness": {
+					"name": "Standhaftigkeit",
+					"value": 0
+				},
+				"Willpower": {
+					"name": "Willensstärke",
+					"value": 0
+				},
+				"Swimming": {
+					"name": "Schwimmen",
+					"value": 0
+				},
+				"Climbing": {
+					"name": "Klettern",
+					"value": 0
+				},
+				"ActOfStrength": {
+					"name": "Kraftakt",
+					"value": 0
+				},
+				"Negotiate": {
+					"name": "Verhandeln",
+					"value": 0
+				},
+				"Intimidate": {
+					"name": "Einschüchtern",
+					"value": 0
+				},
+				"Flirtation": {
+					"name": "Flirten",
+					"value": 0
+				},
+				"Deceive": {
+					"name": "Betrug",
+					"value": 0
+				},
+				"SelfControl": {
+					"name": "Selbstbeherrschung",
+					"value": 0
+				},
+				"AstralSight": {
+					"name": "Astralsicht",
+					"value": 0
+				},
+				"Perceptioning": {
+					"name": "Wahrnehmung",
+					"value": 0
+				},
+				"Empathy": {
+					"name": "Empathie",
+					"value": 0
+				},
+				"Remembering": {
+					"name": "Erinnerung",
+					"value": 0
+				},
+				"RidingSteering": {
+					"name": "Reiten/Lenken",
+					"value": 0
+				},
+				"Acrobatics": {
+					"name": "Akrobatik",
+					"value": 0
+				},
+				"Sneaking": {
+					"name": "Schleichen",
+					"value": 0
+				},
+				"SleightOfHand": {
+					"name": "Fingerfertigkeit",
+					"value": 0
+				},
+				"CommonKnowledge": {
+					"name": "Allgemeinwissen",
+					"value": 0
+				},
+				"Technology": {
+					"name": "Technik",
+					"value": 0
+				},
+				"Orientation": {
+					"name": "Orientierung",
+					"value": 0
+				},
+				"Reasoning": {
+					"name": "Logisches Denken",
+					"value": 0
+				},
+				"Improvise": {
+					"name": "Improvisieren",
+					"value": 0
+				},
+				"Singing": {
+					"name": "Singen",
+					"value": 0
+				},
+				"Dancing": {
+					"name": "Tanzen",
+					"value": 0
+				},
+				"Music": {
+					"name": "Musizieren",
+					"value": 0
+				}
+			},
+			"charinfos_1": {
+				"CharName": {
+					"name": "{{actor.name}}"
+				},
+				"PlayerName": {
+					"name": "Spielername"
+				},
+				"CharLevel": {
+					"name": "Charakterstufe",
+					"value": 1
+				},
+				"Species":{
+					"name": "Volk",
+					"value": ""
+				},
+				"Class":{
+					"name": "Klasse",
+					"value": ""
+				},
+				"Created":{
+					"name": "Erschaffung beendet",
+					"value": false
+				}
+			},
+			"charinfos_2": {
+				"XP": {
+					"name": "Erfahrungspunte aktuell",
+					"value": 0
+				},
+				"XPcom": {
+					"name": "Erfahrungspunte gesamt",
+					"value": 0
+				},
+				"EP": {
+					"name": "Essenzpunte aktuell",
+					"value": 0
+				},
+				"EPcom": {
+					"name": "Essenzpunte gesamt",
+					"value": 0
+				},
+				"CP": {
+					"name": "Kosmospunte aktuell",
+					"value": 1
+				},
+				"CPcom": {
+					"name": "Kosmospunte gesamt",
+					"value": 1
+				}
+			},
+			"charinfos_3": {
+				"Age": {
+					"name": "Alter",
+					"value": 0
+				},
+				"Sex": {
+					"name": "Geschlecht",
+					"value": ""
+				},
+				"Height": {
+					"name": "Grösse",
+					"value": 0
+				},
+				"Weight": {
+					"name": "Gewicht",
+					"value": 0
+				},
+				"Eyecolor": {
+					"name": "Augenfarbe",
+					"value": ""
+				},
+				"Haircolor": {
+					"name": "Haarfarbe",
+					"value": ""
+				},
+				"Being": {
+					"name": "Wesen",
+					"value": ""
+				},
+				"Origin": {
+					"name": "Herkunft",
+					"value": ""
+				},
+				"Faith": {
+					"name": "Glaube",
+					"value": ""
+				}
+			},
+			"charinfos_4": {
+				"PathConcept": {
+					"name": "Pfad/Konzept",
+					"value": ""
+				},
+				"PathPoints": {
+					"name": "Pfadpunkte",
+					"value": 0
+				}
+			},
+			"charinfos_5": {
+				"Channeling": {
+					"name": "Kanalisierung",
+					"Magic": 0,
+					"Faith": 0,
+					"Spirit": 0
+				},
+				"ChannelResources":{
+					"Mana": 0,
+					"ManaCom": 0,
+					"ManaReg": 0
+				}
+			},
+			"equipment": {
+				"Loot": {
+					"name": "Loot",
+					"value": ""
+				},
+				"Cash": {
+					"name": "Geld",
+					"poki": 100,
+					"naki": 0,
+					"jads": 0,
+					"gaps": 0,
+					"riel": 0,
+					"kehl": 0
+				}
+			},
+			"notes": {
+				"Lore": {
+					"value": ""
+				},
+				"Note": {
+					"value": ""
+				}
+			},
+			"profile": {
+				"biography": {
+					"value": ""
+				}
+			}
+		},
+		"Charakter": {
+			"templates": ["mainattributes", "subattributes", "features", "charinfos_1", "charinfos_2", "charinfos_3", "charinfos_4", "charinfos_5", "equipment", "notes", "profile"]
+		},
+		"NPC": {
+			"templates": ["mainattributes", "subattributes", "features", "charinfos_1", "equipment"]
+		},
+		"Elite": {
+			"templates": ["mainattributes", "subattributes", "features", "charinfos_1", "charinfos_3", "equipment"]
+		},
+		"Boss": {
+			"templates": ["mainattributes", "subattributes", "features", "charinfos_1", "charinfos_3", "charinfos_4", "equipment"]
+		},
+		"Token": {
+			"templates": ["charinfos_1", "profile"]
+		}
+	},
+	"Item": {
+		"types": ["Waffen", "Guns", "Armor", "Fertigkeiten", "Skills", "Items", "Companions"],
+		"templates": {
+			"mainstats": {
+				"Typus": {
+					"name": "Gegenstandsart",
+					"value": ""
+				},
+				"TypeName": {
+					"name": "Gegenstandsname",
+					"value": ""
+				},
+				"EnchantValue": {
+					"name": "Verzauberung",
+					"value": 0
+				},
+				"WeaponDamage": {
+					"name": "Schaden",
+					"value": 0
+				},
+				"ArmorProtection": {
+					"name": "Schutz",
+					"value": 0
+				},
+				"Category": {
+					"name": "",
+					"value": ""
+				},
+				"CategoryValue": {
+					"name": "",
+					"value": 0
+				}
+			},
+			"firearms": {
+				"Reload": {
+					"name": "Nachladen",
+					"value": 0
+				},
+				"Range": {
+					"name": "Reichweite",
+					"value": 0
+				}
+			},
+			"skillstats": {
+				"SkillTypus": {
+					"name": "Fähigkeitsattribut",
+					"value": ""
+				},
+				"SkillDifficult": {
+					"name": "Wurfschwierigkeit",
+					"value": 8
+				},
+				"SkillValue": {
+					"name": "Fähigkeitswert",
+					"value": 0
+				},
+				"SkillUsage": {
+					"name": "Anwendungsstufe",
+					"value": 1
+				},
+				"Countermeasures": {
+					"name": "Gegenmaßnahmen",
+					"evade_value": false,
+					"resist_value": false,
+					"parry_value": false,
+					"counter_value": false,
+					"ultima_value": false
+				}
+			},
+			"featstats": {
+				"FeatTypus": {
+					"name": "Fertigkeitsattribut",
+					"value": "Unbekannt"
+				},
+				"FeatDiscription": {
+					"name": "Beschreibung",
+					"value": "Unbekannt"
+				},
+				"FeatValue": {
+					"name": "Beschreibung",
+					"value": 0
+				}
+			},
+			"iteminfo": {
+				"ItemDiscription": {
+					"name": "Beschreibung",
+					"value": "Unbekannt"
+				},			
+				"ItemType": {
+					"name": "Type",
+					"value": ""
+				},
+				"ItemCount": {
+					"name": "Menge",
+					"value": "0"
+				}			
+			},
+			"compainioninfo": {
+				"Typus": {
+					"name": "Beschreibung",
+					"value": "Unbekannt"
+				},
+				"Sealgrade": {
+					"name": "Beschreibung",
+					"value": "0"
+				},
+				"DmgProt": {
+					"name": "Schaden/Schutz",
+					"value": "0"
+				},
+				"Skill": {
+					"name": "Fähigkeit",
+					"value": ""
+				},
+				"Discription": {
+					"name": "Wirkung",
+					"value": ""
+				}
+			},
+			"formula": {
+				"formula": "1d12"
+			}
+		},
+		"Waffen": {
+			"templates": ["mainstats", "firearms", "iteminfo", "formula"]
+		},
+		"Guns": {
+			"templates": ["mainstats", "firearms", "iteminfo", "formula"]
+		},
+		"Armor": {
+			"templates": ["mainstats", "firearms", "iteminfo", "formula"]
+		},
+		"Fertigkeiten": {
+			"templates": ["featstats", "iteminfo", "formula"]
+		},
+		"Skills": {
+			"templates": ["skillstats", "iteminfo", "formula"]
+		},
+		"Items": {
+			"templates": ["iteminfo"]
+		},
+		"Companions": {
+			"templates": ["iteminfo", "compainioninfo"]
+		}
+	}
+}

@@ -1,0 +1,42 @@
+<label style="width: 150px; color: rgb(0, 0, 0); text-align: center;">Siegelkräfte und Vertraute</label>
+
+<div class="seal-body">
+   <p>
+      <br>
+      <label style="width: 150px; color: rgb(0, 0, 0); text-align: center;">Siegel-Macht: </label><input type="number" class="{{actor.data.Siegel-Macht.value}}" name="data.SealPower.value" style="width:35px; text-align:center;" title="Siegelmacht-Wert" value="{{actor.data.SealPower.value}}" placeholder="0"></td>
+   </p>
+</div>
+
+<div class="section-body">
+   <ol class="companion-list item-list">
+      {{#each companions as |companion companionsId|}}
+         <div class="item companion flexrow" data-item-id="{{companion._id}}">
+            <table class="attribute_center" border="2">
+               <tbody>
+                  <tr>
+                     <th nowrap colspan="2" style="width: 120px;"><label class="sheet-table-header" style="width: 120px; text-align:center; color: rgb(0, 0, 0);">Vertrauter</label></th>
+                     <th nowrap style="width: 80px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Siegel-Grad</label></th>
+                     <th nowrap style="width: 130px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Typus</label></th>
+                     <th nowrap style="width: 120px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Fähigkeit</label></th>
+                     <th nowrap style="width: 120px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Schaden/Schutz</label></th>
+                     <th nowrap style="width: 150px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Wirkung</label></th>
+                     <th nowrap style="width: 80px;"><label class="sheet-table-header" style="width: 150px; text-align:center; color: rgb(0, 0, 0);">Entfernen</label></th>
+                  </tr>
+                  <tr style="width: 120px;">
+                     <td nowrap align="center" style="border-right: 1px;"><label class="sheet-table-header" style="width: 80px; text-align:center; color: rgb(0, 0, 0);"><a class="item-edit">{{companion.name}}</a></label></td>
+                     <td nowrap align="center" style="border-left: 1px;"><span style="width: 50px;" title="{{data.ItemDiscription.value}}">&nbsp;<img src="../../systems/toeloria/icons/info.svg" style="height: 15px; width: 15px; border: none;"></img></span>&nbsp;&nbsp;</td>                     
+                     <td nowrap align="center"><input type="number" class="" title="Siegel-Grad Wert" style="width:35px; text-align:center;" value="{{companion.data.Sealgrade.value}}" disabled="true"></td>
+                     <td nowrap align="center"><input type="text" class="" title="Typus-Attribut" style="width:110px; text-align:center;" value="{{companion.data.Typus.value}}" disabled="true"></td>
+                     <td nowrap align="center"><input type="text" class="" title="Fähigkeit" style="width:100px; text-align:center;" id="Skill" value="{{companion.data.Skill.value}}" disabled="true"></td>
+                     <td nowrap align="center"><input type="number" class="" title="Schaden/Schutz Wert" style="width:35px; text-align:center;" value="{{companion.data.DmgProt.value}}" disabled="true"></td>                        
+                     <td nowrap align="center"><input type="text" class="" title="Wirkung" style="width:120px; text-align:center;" id="Discription" value="{{companion.data.Discription.value}}" disabled="true"></td>
+                     <!-- <td nowrap align="center"><button type="button" data-toe-roll="1d12" data-toe-ability="Strength" style="background-image:url(../../systems/toeloria/icons/d12_kl.png); height: 27px; width: 27px;"></button></td> -->
+                     <!-- {{actor.data.ItemDiscription.value}} -->
+                     <td nowrap align="center" ><span class="item-delete delete">&nbsp;<i class="fas fa-trash"></i>&nbsp;</span></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      {{/each}}
+   </ol>
+</div>
